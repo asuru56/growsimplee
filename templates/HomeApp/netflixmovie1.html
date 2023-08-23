@@ -1,0 +1,60 @@
+{% load static %}
+
+<!-- netflix movie picker -->
+
+
+    <center><h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">Populer Movie</h2></center>
+    <!-- MAIN CONTAINER -->
+    <div class="container-fluid">
+
+        <div class="location" id="home">
+            <div class="box">
+                {% for i in pplrobj %}
+                    <a href="{% url 'movie_details' i.id %}"><img src="http://image.tmdb.org/t/p/original/{{ i.poster_path }}" alt=""></a>
+                {% endfor %}
+            </div>
+        </div>
+        <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">Choose Your Movie</h2>
+
+        <div class="box" style="margin-top: 20px;">
+            {% for i in mobjfft %}
+                <a href="{% url 'movie_details' i.id %}"><img src="http://image.tmdb.org/t/p/original/{{ i.poster_path }}" alt=""></a>
+            {% endfor %}
+        </div>
+
+        <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">Top Rated Movies</h2>
+        <div class="box">
+            {% for i in tprobj %}
+                <a href="{% url 'movie_details' i.id %}"><img src="http://image.tmdb.org/t/p/original/{{ i.poster_path }}" alt=""></a>
+            {% endfor %}
+        </div>
+        <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">LETEST MOVIES AND SERIES</h2>
+        <br><br>
+
+
+        <div class="box">
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m1.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m2.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m3.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m4.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m5.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m6.PNG?raw=true" alt=""></a>
+        </div>
+        <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">LETEST MOVIES AND SERIES</h2>
+        <br><br>
+
+        <div class="box">
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o1.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o2.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o3.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o4.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o5.PNG?raw=true" alt=""></a>
+            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o6.PNG?raw=true" alt=""></a>
+        </div>
+        <h2 class="section-title mb-70 wow fadeInUp" data-wow-delay="100ms">LETEST MOVIES AND SERIES</h2>
+        <br><br>
+
+        <!-- END OF MAIN CONTAINER -->
+    </div>
+</section>
+<!-- netflix movie picker end -->

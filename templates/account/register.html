@@ -1,0 +1,117 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    {% include 'HomeApp/preloader.html' %}
+    {% include 'HomeApp/csslinks.html' %}
+    <link href="{% static 'register/css/main.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'register/css/socialbutton.css' %}" rel="stylesheet" media="all">
+</head>
+<body>
+{% include 'HomeApp/navbar.html' %}
+<!-- register start -->
+
+<!-- ##### Articles Area Start ##### -->
+
+    <div class="container">
+        <div class="row justify -content-center">
+
+            <!-- Contact Form Area -->
+            <div class="col-12">
+                <!-- Contact Form -->
+                <div>
+                    <div class="container login-cont">
+                        <div class="row">
+                            <div class="col-10 col-sm-6 col-md-4 col-lg-4 offset-1 offset-sm-3 offset-md-4 offset-lg-4 login-col">
+                                <i class="icon ion-lock-combination"></i>
+                                <h2 class="title">Register</h2>
+
+                                <!-- form start -->
+                                <form method="POST">
+                                    {% csrf_token %}
+
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="email" placeholder="Email"
+                                               name="{{ form1.username.name }}" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="password" placeholder="Password"
+                                               name="{{ form1.password1.name }}" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="password" placeholder="Confirm Password"
+                                               name="{{ form1.password2.name }}" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="text" placeholder="Username"
+                                               name="{{ form2.usrname.name }}" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="text" placeholder="Name"
+                                               name="{{ form2.username.name }}">
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input--style-3 js-datepicker" type="text"
+                                               placeholder="Age" name="{{ form2.age.name }}" maxlength="2">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input--style-3" type="text"
+                                               placeholder="Phone Number" name="{{ form2.phone_number.name }}" maxlength="10" required>
+                                    </div>
+                                    <div class="p-t-10">
+                                        <h4><font color="yellow">{{ msg }}</font> </h4>
+                                    </div>
+                                    <br>
+                                    <div class="p-t-10">
+                                        <center>
+                                            <button class="btn btn--pill btn-outline-success" type="submit">
+                                                Register
+                                            </button>
+                                        </center>
+                                    </div>
+                                    <div class="p-t-10">
+                                        <center>
+                                            <button class="btn btn--pill btn-outline-light" type="button" onclick="">
+                                                Login
+                                            </button>
+                                        </center>
+                                    </div>
+                                    <br><br>
+
+                                    <a href="#" class="reddit btnscl">
+                                        <i class="fa fa-reddit fa-fw"></i> Register with Reddit
+                                    </a>
+                                    <a href="#" class="twitter btnscl">
+                                        <i class="fa fa-twitter fa-fw"></i> Register with Twitter
+                                    </a>
+                                    <a href="#" class="fb btnscl">
+                                        <i class="fa fa-facebook fa-fw"></i> Register with Facebook
+                                    </a>
+                                    <a href="#" class="google btnscl"><i class="fa fa-google fa-fw">
+                                    </i> Register with Google
+                                    </a>
+                                    <!-- form start -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+</section>
+<!-- register end -->
+
+{% include 'HomeApp/footer.html' %}
+
+</body>
+{% include 'HomeApp/javascriptlinks.html' %}
+
+</html>
